@@ -1,0 +1,370 @@
+/* Import a font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Define our base variables */
+:root {
+  --yellow: #ffd700;  /* Yellow for Cyclops' visor */
+  --blue: #0073aa;    /* Blue for Jean Grey's suit */
+  --red: #c2272d;     /* Red for Wolverine's suit */
+  --gray: #ffffff;    /* Gray for text */
+  --gray-light: #cccccc;  /* Light gray for borders */
+
+  --font-family-primary: 'Yellowtail', cursive;
+  --font-family-secondary: 'Roboto', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: clamp(1.25rem, 1vw, 1.5rem);
+  --font-size-xl: clamp(1.8rem, 2vw, 2.2rem);
+  --border-radius: 5px;
+}
+
+/* Style the body */
+body {
+  font-family: var(--font-family-secondary);
+  color: var(--gray);
+  font-size: var(--font-size-base);
+  background-color: #1c0263;
+  margin: 0;
+}
+
+.hero-image-x {
+  width: 18%;  
+  height: 18%; 
+
+}
+
+.author__heading {
+  font-size: 24px;
+}
+
+/* Style links */
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* Style headings */
+h1 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  color: var(--yellow);
+}
+
+h2,
+h3 {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-lg);
+  color: var(--gray);
+}
+
+/* Style form elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+  font-family: var(--font-family-secondary);
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
+}
+
+/* Style buttons */
+.btn {
+  background-color: var(--yellow);
+  border: none;
+  color: var(--blue);
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: var(--font-family-secondary);
+  font-weight: bold;
+  border-radius: var(--border-radius);
+}
+
+.header__nav .nav-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox to display items side by side */
+}
+
+.header__nav .nav-item {
+  margin-right: 20px; /* Space between items */
+}
+
+.header__nav .nav-link {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+}
+
+.header__nav .nav-item:last-child {
+  margin-right: 0; /* Remove right margin from the last item */
+}
+
+.btn-delete {
+  background-color: var(--red);
+  color: white;
+}
+
+/* Style images */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Layout */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main {
+  padding: 20px 0;
+}
+
+/* Hero Section */
+.hero-image {
+  max-height: 500px;
+  /* Add a subtle shadow effect */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+/* Main Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.header__logo {
+  font-family: var(--font-family-primary);
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+.header__logo:hover {
+  text-decoration: underline;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav li {
+  font-family: var(--font-family-secondary);
+  font-weight: bold;
+}
+
+.header__nav a {
+  padding: 10px;
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.header__nav a:hover {
+  color: var(--blue);
+}
+
+.header__button {
+  display: flex;
+}
+
+.header__button button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: var(--gray);
+  font-family: var(--font-family-secondary);
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.header__button button:hover {
+  background-color: var(--gray-light);
+  color: var(--black);
+}
+
+/* Author - HomePage */
+.author {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.author__heading {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-lg);
+  color: var(--yellow);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.author__body {
+  font-size: var(--font-size-md);
+  color: var(--gray);
+  margin: 5px 0 40px 0;
+}
+
+/* Home Article List */
+.articles__heading {
+  margin-top: 4rem;
+  font-family: var(--font-family-secondary);
+  font-weight: bold;
+  font-size: var(--font-size-lg);
+  color: var(--gray);
+}
+
+.article-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-base);
+}
+
+.article-list__date {
+  font-size: 0.8rem;
+  color: var(--gray-light);
+  width: 100px;
+  display: inline-block;
+}
+
+.article-ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--gray);
+  margin: 18px 0;
+}
+
+.article-ul li:hover {
+  color: var(--blue);
+}
+
+.article-ul li {
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.article-ul li:not(:last-child) {
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.article {
+  white-space: pre-wrap;
+}
+
+/* Footer */
+.footer {
+  margin: 4rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+/* Dashboard Admin */
+.admin-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-posts {
+  padding: 0;
+  margin: 0;
+}
+
+.admin-post-controls form {
+  display: inline-block;
+}
+
+.admin-post-controls .btn {
+  display: inline-block;
+  background-color: var(--gray);  /* Change background color for admin section */
+  color: var(--black);
+  border: none;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.admin-posts li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-light);
+  color: var(--gray);
+}
+
+/* SearchBar */
+.searchBar {
+  visibility: hidden;
+  transform: translateY(-100px);
+  background-color: var(--black);
+  padding: 4px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.searchBar.open {
+  transform: translateY(0);
+  transition: transform 0.1s;
+}
+
+.searchBar input {
+  margin: 0;
+  border: none;
+  padding: 10px;
+  background-color: var(--black);
+  color: var(--gray-light);
+  font-family: var(--font-family-secondary);
+  font-size: 1rem;
+  width: 100%;
+}
+
+#searchClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--gray-light);
+  padding: 15px;
+  cursor: pointer;
+}
+
+.pagination {
+  font-size: 1.3rem;
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 40px;
+  display: inline-block;
+}
+
+.pagination:hover {
+  color: var(--blue);
+}

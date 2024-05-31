@@ -1,0 +1,37 @@
+<img src="/img/Xlogo.png" alt="Xmen Logo" class="hero-image-x" width="50%">
+
+
+<div class="author">
+  <h1 class="author__heading" style="font-size: 72px;">About the Mutant Chronicles</h1>
+  <p class="author__body">Welcome to the Mutant Chronicles, your ultimate source for all things X-Men. As a 35-year-old fan of the classic X-Men series, I've dedicated myself to bringing you the latest and most exciting news from the ever-evolving world of mutants.
+    Powered by my passion for the X-Men classics, including Express.js, Node.js, and MongoDB, our platform delivers a seamless and immersive experience for fellow fans like you.
+    Whether you've been following the adventures of Wolverine and Cyclops since childhood or just discovered the mutant universe, we've got you covered with the latest updates, reviews, and insights on some of the most iconic mutants in the Marvel universe.
+    From the legendary battles at the Xavier Institute to the epic showdowns with Magneto and the Brotherhood of Mutants, join us on a journey through the Mutant Chronicles and explore the extraordinary world of mutants like never before.</p>
+</div>
+
+<img src="/img/gaming.jpg" alt="person looking out through window" class="hero-image" width="300" height="500">
+
+<section class="articles">
+  <h2 class="articles__heading">Latest Posts</h2>
+
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+      <li>
+        <a href="/post/<%= post._id %>">
+          <span><%= post.title %></span>
+          <span class="article-list__date">
+            <% if (post.createdAt) { %>
+              <%= post.createdAt.toDateString() %>
+            <% } else { %>
+              Date Unknown
+            <% } %>
+          </span>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+
+  <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+  <% } %>
+</section>
